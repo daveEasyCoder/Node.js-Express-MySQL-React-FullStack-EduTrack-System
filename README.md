@@ -19,7 +19,7 @@ EduTrack is  built with **Node.js**, **Express.js**, **MySQL**, **React** and **
 
 ## 📸 Screenshots
 
-<img src="screenshoot/admin.png" alt="Homepage" width="600"/>
+<img src="screenshoot/dashboard.png" alt="Homepage" width="600"/>
 
 ---
  
@@ -31,11 +31,11 @@ EduTrack is  built with **Node.js**, **Express.js**, **MySQL**, **React** and **
 
 ---
  
-<img src="screenshoot/studeList.png" alt="student list Page" width="600"/>
+<img src="screenshoot/studList.png" alt="student list Page" width="600"/>
 
 ---
  
-<img src="screenshoot/studeDetail.png" alt="student detail Page" width="600"/>
+<img src="screenshoot/studDetail.png" alt="student detail Page" width="600"/>
 
 ---
 
@@ -43,7 +43,7 @@ EduTrack is  built with **Node.js**, **Express.js**, **MySQL**, **React** and **
 
 ---
 
-<img src="screenshoot/coureDetail.png" alt="course detail Page" width="600"/>
+<img src="screenshoot/courseDetail.png" alt="course detail Page" width="600"/>
 
 ---
 <img src="screenshoot/updateCourse.png" alt="update course Page" width="600"/>
