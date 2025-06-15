@@ -1,0 +1,67 @@
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    parent_id INT,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other'),
+    birthdate DATE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    address TEXT,
+    department VARCHAR(100),
+    year INT,
+    section INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY(parent_id) REFERENCES parents(id) ON DELETE CASCADE
+);
+CREATE TABLE parents (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other'),
+    birthdate DATE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    address TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE teachers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    gender VARCHAR(20) NOT NULL,
+    address VARCHAR(200),
+    qualification VARCHAR(100) NOT NULL,
+    subject_speciality VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    desctiption TEXT,
+    credit_hour INT NOT NULL,
+    teacher_id INT,
+    foreign key(teacher_id) references teachers(id) ON DELETE SET NULL
+);
+
+CREATE TABLE enrollments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    enrollment_date DATE,
+    foreign key(student_id) references students(id) ON DELETE CASCADE,
+	foreign key(course_id) references courses(id) ON DELETE CASCADE
+);
+
+
+
+DATABASE QUERY FOR DETAIL STUDENT
+
+select s.first_name,s.last_name,s.gender,s.birthdate,s.email,s.phone,
+s.address,s.department,s.year,s.section,p.name,p.gender as parent_gender,
+p.birthdate as parent_birthdate,p.email as parent_email,p.phone as parent_phone,p.address as parent_address
+FROM students s JOIN parents p
+WHERE s.parent_id = p.id AND s.id = 11;

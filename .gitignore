@@ -1,0 +1,11 @@
+
+backend/node_modules/
+backend/.env
+
+
+student-management/node_modules/
+student-management/build/
+
+
+.DS_Store
+Thumbs.db
