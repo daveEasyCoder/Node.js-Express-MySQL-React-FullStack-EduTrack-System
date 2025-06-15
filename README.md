@@ -39,7 +39,7 @@ EduTrack is  built with **Node.js**, **Express.js**, **MySQL**, **React** and **
 
 ---
 
-<img src="screenshoot/courseList" alt="course list Page" width="600"/>
+<img src="screenshoot/courseList.png" alt="course list Page" width="600"/>
 
 ---
 
