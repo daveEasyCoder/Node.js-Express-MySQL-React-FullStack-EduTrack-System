@@ -92,5 +92,7 @@ EduTrack is  built with **Node.js**, **Express.js**, **MySQL**, **React** and **
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/daveEasyCoder/edutrack-system.git
-cd edutrack-system/backend
+git clone https://github.com/daveEasyCoder/Node.js-Express-MySQL-React-FullStack-EduTrack-System.git
+cd Node.js-Express-MySQL-React-FullStack-EduTrack-System/backend
+npm install
+npm start
